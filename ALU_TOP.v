@@ -3,7 +3,7 @@ module ALU_TOP (
     input signed wire [15:0] y_init,
     input signed wire [15:0] x_shift,
     input signed wire [15:0] y_shift,
-    input wire d_i,
+    input wire [15:0] target_angle,
     input  wire [15:0] angle,
     input wire [15:0] delta_angle
 
@@ -12,29 +12,30 @@ module ALU_TOP (
     output wire [15:0] angle_out
 );
 
+wire d_i;
 
+assign d_i = ?1'b1:1'b0;
     ALU u_x_ALU(
-        .data_in_one(),
-        .d_i(),
-        .data_in_two(),
+        .data_in_one(x_init),
+        .d_i(~d_i),
+        .data_in_two(y_shift),
         .data_out(x_out)
     );
 
 
     ALU u_y_ALU(
-        .data_in_one(),
-        .d_i(),
-        .data_in_two(),
-        .data_out(x_out)    
+        .data_in_one(y_init),
+        .d_i(d_i),
+        .data_in_two(x_shift),
+        .data_out(y_out)    
     );
 
 
-    
     ALU u_angle_ALU(
-        .data_in_one(),
-        .d_i(),
-        .data_in_two(),
-        .data_out(x_out)
+        .data_in_one(angle),
+        .d_i(d_i),
+        .data_in_two(delta_angle),
+        .data_out(angle_out)
     );
     
 
