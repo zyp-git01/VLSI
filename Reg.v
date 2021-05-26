@@ -1,14 +1,14 @@
-module Reg (
+module reg (
     input clk,
-    input Reg_en,
-    input wire [15:0] Reg_in,
+    input reg_en,
+    input wire [15:0] reg_in,
 
-    output wire [15:0] Reg_out 
+    output reg [15:0] reg_out 
 );
     
 always @(posedge clk) begin
-    if (Reg_en)
-        Reg_out <= Reg_in;
+    if (reg_en)
+        reg_out <= reg_in;
 end
 
 endmodule
