@@ -19,7 +19,7 @@ module  CORDIC(
     output wire [15:0] CORDIC_OUT
 );
 
-parameter  k = 16'b0000000010011011;
+
 
 //sin_cos
 wire [15:0] x_out;
@@ -59,6 +59,14 @@ SIN_COS_TOP u_SIN_COS_TOP(
     .angle_out(angle_out)
 );
 
+output_select u_output_select(
+    .select(select),
+    .x(),
+    .y(),
+    .angle(),
+
+    .CORDIC_OUT()
+);
 
 
 
