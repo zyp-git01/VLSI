@@ -5,9 +5,13 @@
 //𝒄𝒐𝒔 𝝓 + 𝟏𝟖𝟎° = −𝒄𝒐𝒔𝝓
 //𝒔𝒊𝒏 𝝓 + 𝟏𝟖𝟎° = −𝒔𝒊𝒏𝝓
 
+//当需要求解arctan时，需要输入x和y，
+//这时候就需要两个输入，其中第二个输入为another信号
 
 module init (
-    input signed [15:0] in_angle ,
+    input signed [15:0] in_angle,
+    input signed [15:0] another,
+    input wire [3:0] select,
 
     output [] infor,
     output signed wire [15:0] x,
@@ -15,4 +19,8 @@ module init (
     output wire [15:0] out_angle
 );
     
+assign x = select[3] ? in_angle : 16'h0001;
+assign y = select[3] ? another : 16'h0000;
+
+
 endmodule
