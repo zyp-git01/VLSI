@@ -8,16 +8,14 @@ module ALU_TOP (
     input wire [15:0] angle,
     input wire [15:0] delta_angle,
 
-    output wire [3:0] select_out,
     output signed wire [15:0] x_out,
     output signed wire [15:0] y_out,
-    output wire [15:0] angle_out,
-    output wire [15:0] target_angle_out
+    output wire [15:0] angle_out
 );
 
 wire d_i;
 
-assign d_i = (angle < target_angle)?1'b1:1'b0;
+assign d_i = select[3]?y>:((angle < target_angle)?1'b1:1'b0);
 
 ALU u_x_ALU(
     .data_in_one(x_init),

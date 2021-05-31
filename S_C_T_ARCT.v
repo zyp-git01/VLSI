@@ -9,7 +9,7 @@ module S_C_T_ARCT (
     output wire [15:0] x_out,
     output wire [15:0] y_out,
     output wire [15:0] angle_out,
-    output wire [3:0] select
+    output wire [3:0] select_out
 );
 
 
@@ -77,6 +77,7 @@ ALU_TOP u1_ALU_TOP(
     .x_shift(x_init),
     .y_shift(y_init),
     .target_angle(target_angle),
+    .select(select),
     .angle(16'd0),
     .delta_angle(agnle_45),
 

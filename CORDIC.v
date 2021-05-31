@@ -21,11 +21,11 @@ module  CORDIC(
 
 
 
-//sin_cos
+//S_C_T_ARCT
 wire [15:0] x_out;
 wire [15:0] y_out;
 wire [15:0] angle_out;
-
+wire [3:0] select_out;
 
 
 
@@ -50,22 +50,24 @@ init u_init(
 S_C_T_ARCT u_SIN_COS_TOP(
     .clk(clk),
     .reg_en(reg_en), 
+    .select(select),
     .x_init(x_init_out),
     .y_init(y_init_out),
     .target_angle(angle_init_out),
 
     .x_out(x_out),
     .y_out(y_out),
-    .angle_out(angle_out)
+    .angle_out(angle_out),
+    .select_out(select_out)
 );
 
 output_select u_output_select(
-    .select(select),
-    .x(x_sin_cos),
-    .y(y_sin_cos),
-    .angle(angle_sin_cos),
+    .select(select_out),
+    .x(x_out),
+    .y(y_out),
+    .angle(angle_out),
 
-    .CORDIC_OUT()
+    .CORDIC_OUT(CORDIC_OUT)
 );
 
 
