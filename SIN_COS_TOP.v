@@ -1,13 +1,15 @@
-module SIN_COS_TOP (
+module S_C_T_ARCT (
     input clk,
-    input reg_en, 
+    input reg_en,
+    input wire [3:0] select, 
     input wire [15:0] x_init,
     input wire [15:0] y_init,
     input wire [15:0] target_angle,
 
     output wire [15:0] x_out,
     output wire [15:0] y_out,
-    output wire [15:0] angle_out
+    output wire [15:0] angle_out,
+    output wire [3:0] select
 );
 
 

@@ -4,12 +4,15 @@ module ALU_TOP (
     input signed wire [15:0] x_shift,
     input signed wire [15:0] y_shift,
     input wire [15:0] target_angle,
-    input  wire [15:0] angle,
+    input wire [3:0] select,
+    input wire [15:0] angle,
     input wire [15:0] delta_angle,
 
+    output wire [3:0] select_out,
     output signed wire [15:0] x_out,
     output signed wire [15:0] y_out,
-    output wire [15:0] angle_out
+    output wire [15:0] angle_out,
+    output wire [15:0] target_angle_out
 );
 
 wire d_i;

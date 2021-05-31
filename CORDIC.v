@@ -47,7 +47,7 @@ init u_init(
 );
 
 
-SIN_COS_TOP u_SIN_COS_TOP(
+S_C_T_ARCT u_SIN_COS_TOP(
     .clk(clk),
     .reg_en(reg_en), 
     .x_init(x_init_out),
@@ -61,9 +61,9 @@ SIN_COS_TOP u_SIN_COS_TOP(
 
 output_select u_output_select(
     .select(select),
-    .x(),
-    .y(),
-    .angle(),
+    .x(x_sin_cos),
+    .y(y_sin_cos),
+    .angle(angle_sin_cos),
 
     .CORDIC_OUT()
 );
