@@ -18,6 +18,7 @@ module init (
     output reg [23:0] x,
     output reg [23:0] y,
     output reg [23:0] out_angle,
+    output reg [3:0] select_out,
     output reg valid_init_out
 );
 
@@ -33,7 +34,7 @@ end
 
 always @(posedge clk) begin
     if (valid)
-        out_angle <= select[3] ? 24'h0000: {in_angle,8{0}}};
+        out_angle <= select[3] ? 24'h000000: {{8'b00000000},in_angle};
 end
 
 always @(posedge clk) begin
@@ -41,6 +42,11 @@ always @(posedge clk) begin
         valid_init_out <= 1'b1;
     else
         valid_init_out <= 1'b0;
+end
+
+always @(posedge clk) begin
+    if (valid)
+        select_out <= select;
 end
 
 endmodule

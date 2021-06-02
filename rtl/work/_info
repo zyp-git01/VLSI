@@ -1,0 +1,216 @@
+m255
+K4
+z2
+13
+cModel Technology
+Z0 dD:/Desktop/sha256/5_31_new
+!s112 0.1
+!i10d 8192
+!i10e 25
+!i10f 100
+vALU
+Z1 !s100 >ohP=58MOCXn?I]:b:SK43
+Z2 ISFLfT@VSdU]a4bGMcQkBb2
+Z3 V`JN@9S9cnhjKRR_L]QIcM3
+Z4 dD:/Desktop/VLSI/project/rtl/VLSI/rtl
+Z5 w1622529161
+Z6 8D:/Desktop/VLSI/project/rtl/VLSI/rtl/ALU.v
+Z7 FD:/Desktop/VLSI/project/rtl/VLSI/rtl/ALU.v
+L0 6
+Z8 OL;L;10.2c;57
+r1
+31
+Z9 !s90 -reportprogress|300|-work|work|-vopt|D:/Desktop/VLSI/project/rtl/VLSI/rtl/ALU.v|
+Z10 o-work work -L mtiAvm -L mtiOvm -L mtiUvm -L mtiUPF
+Z11 n@a@l@u
+Z12 !s110 1622560679
+Z13 !s108 1622560678.965000
+Z14 !s107 D:/Desktop/VLSI/project/rtl/VLSI/rtl/ALU.v|
+!i10b 1
+!s85 0
+!i111 0
+vALU_TOP
+R12
+Z15 I^BJA?J[6L2]FEKO:6ek8Q0
+R3
+R4
+Z16 w1622560663
+Z17 8D:/Desktop/VLSI/project/rtl/VLSI/rtl/ALU_TOP.v
+Z18 FD:/Desktop/VLSI/project/rtl/VLSI/rtl/ALU_TOP.v
+L0 1
+R8
+r1
+31
+Z19 !s90 -reportprogress|300|-work|work|-vopt|D:/Desktop/VLSI/project/rtl/VLSI/rtl/ALU_TOP.v|
+R10
+Z20 n@a@l@u_@t@o@p
+Z21 !s100 PTdCI2?FW7m7?CH;cG<?F1
+Z22 !s108 1622560679.202000
+Z23 !s107 D:/Desktop/VLSI/project/rtl/VLSI/rtl/ALU_TOP.v|
+!i10b 1
+!s85 0
+!i111 0
+vcontrol
+R12
+Z24 !s100 jWXJfokV_z8e]RDj[S7RA2
+Z25 IEnO6Sj7k947z?J<EM`U_U3
+R3
+R4
+Z26 w1622014461
+Z27 8D:/Desktop/VLSI/project/rtl/VLSI/rtl/control.v
+Z28 FD:/Desktop/VLSI/project/rtl/VLSI/rtl/control.v
+L0 1
+R8
+r1
+31
+Z29 !s90 -reportprogress|300|-work|work|-vopt|D:/Desktop/VLSI/project/rtl/VLSI/rtl/control.v|
+R10
+Z30 !s108 1622560679.328000
+Z31 !s107 D:/Desktop/VLSI/project/rtl/VLSI/rtl/control.v|
+!i10b 1
+!s85 0
+!i111 0
+vCORDIC
+R12
+Z32 !s100 A?P9Kn0nAPg7>Oj5Y35`R1
+Z33 IR<KW[0T94eES@aO?aZjh43
+R3
+R4
+Z34 w1622552225
+Z35 8D:/Desktop/VLSI/project/rtl/VLSI/rtl/CORDIC.v
+Z36 FD:/Desktop/VLSI/project/rtl/VLSI/rtl/CORDIC.v
+L0 16
+R8
+r1
+31
+Z37 !s90 -reportprogress|300|-work|work|-vopt|D:/Desktop/VLSI/project/rtl/VLSI/rtl/CORDIC.v|
+R10
+Z38 n@c@o@r@d@i@c
+Z39 !s108 1622560679.447000
+Z40 !s107 D:/Desktop/VLSI/project/rtl/VLSI/rtl/CORDIC.v|
+!i10b 1
+!s85 0
+!i111 0
+vinit
+R12
+Z41 !s100 n0WT5fP5gTMaolFfFSz8O0
+Z42 I7egPcWijn8AkJAfYGO9SE0
+R3
+R4
+Z43 w1622553453
+Z44 8D:/Desktop/VLSI/project/rtl/VLSI/rtl/init.v
+Z45 FD:/Desktop/VLSI/project/rtl/VLSI/rtl/init.v
+L0 11
+R8
+r1
+31
+Z46 !s90 -reportprogress|300|-work|work|-vopt|D:/Desktop/VLSI/project/rtl/VLSI/rtl/init.v|
+R10
+Z47 !s108 1622560679.549000
+Z48 !s107 D:/Desktop/VLSI/project/rtl/VLSI/rtl/init.v|
+!i10b 1
+!s85 0
+!i111 0
+voutput_select
+R12
+Z49 !s100 iHYM<IUke9B5C=S^GmXD51
+Z50 IBIY;UdZfQLGD0OVkP8AfQ3
+R3
+R4
+Z51 w1622536775
+Z52 8D:/Desktop/VLSI/project/rtl/VLSI/rtl/output_select.v
+Z53 FD:/Desktop/VLSI/project/rtl/VLSI/rtl/output_select.v
+L0 1
+R8
+r1
+31
+Z54 !s90 -reportprogress|300|-work|work|-vopt|D:/Desktop/VLSI/project/rtl/VLSI/rtl/output_select.v|
+R10
+Z55 !s108 1622560679.712000
+Z56 !s107 D:/Desktop/VLSI/project/rtl/VLSI/rtl/output_select.v|
+!i10b 1
+!s85 0
+!i111 0
+vReg
+R12
+Z57 !s100 ohebV]>NBT3DenA8LAh4^2
+Z58 I?1QNb^Kcm3L;=^2M4bjEl1
+R3
+R4
+Z59 w1622535997
+Z60 8D:/Desktop/VLSI/project/rtl/VLSI/rtl/reg.v
+Z61 FD:/Desktop/VLSI/project/rtl/VLSI/rtl/reg.v
+L0 1
+R8
+r1
+31
+Z62 !s90 -reportprogress|300|-work|work|-vopt|D:/Desktop/VLSI/project/rtl/VLSI/rtl/reg.v|
+R10
+n@reg
+Z63 !s108 1622560679.814000
+Z64 !s107 D:/Desktop/VLSI/project/rtl/VLSI/rtl/reg.v|
+!i10b 1
+!s85 0
+!i111 0
+vREG_TOP
+R12
+Z65 !s100 Hz6Zg<caIJ4f?z9i9oHgO1
+Z66 IkPZKaU6QXJ485EmMjJLEe2
+R3
+R4
+Z67 w1622555168
+Z68 8D:/Desktop/VLSI/project/rtl/VLSI/rtl/REG_TOP.v
+Z69 FD:/Desktop/VLSI/project/rtl/VLSI/rtl/REG_TOP.v
+L0 1
+R8
+r1
+31
+Z70 !s90 -reportprogress|300|-work|work|-vopt|D:/Desktop/VLSI/project/rtl/VLSI/rtl/REG_TOP.v|
+R10
+Z71 n@r@e@g_@t@o@p
+Z72 !s108 1622560679.932000
+Z73 !s107 D:/Desktop/VLSI/project/rtl/VLSI/rtl/REG_TOP.v|
+!i10b 1
+!s85 0
+!i111 0
+vS_C_T_ARCT
+Z74 !s100 j]e@cUMiSP[7NL1JPaFOS0
+Z75 I<13kYM4e02C`0XSmEKH^f1
+R3
+R4
+Z76 w1622560445
+Z77 8D:/Desktop/VLSI/project/rtl/VLSI/rtl/S_C_T_ARCT.v
+Z78 FD:/Desktop/VLSI/project/rtl/VLSI/rtl/S_C_T_ARCT.v
+L0 1
+R8
+r1
+31
+Z79 !s90 -reportprogress|300|-work|work|-vopt|D:/Desktop/VLSI/project/rtl/VLSI/rtl/S_C_T_ARCT.v|
+R10
+Z80 n@s_@c_@t_@a@r@c@t
+Z81 !s110 1622560680
+!i10b 1
+!s85 0
+Z82 !s108 1622560680.039000
+Z83 !s107 D:/Desktop/VLSI/project/rtl/VLSI/rtl/S_C_T_ARCT.v|
+!i111 0
+vsim
+R81
+!i10b 1
+Z84 !s100 e65=mR<zW_=nY^Unm18X:0
+Z85 Ii6j98mb21114Jhc0dg_f?3
+R3
+R4
+Z86 w1622536847
+Z87 8D:/Desktop/VLSI/project/rtl/VLSI/rtl/sim.v
+Z88 FD:/Desktop/VLSI/project/rtl/VLSI/rtl/sim.v
+L0 3
+R8
+r1
+!s85 0
+31
+!s108 1622560680.150000
+!s107 D:/Desktop/VLSI/project/rtl/VLSI/rtl/sim.v|
+Z89 !s90 -reportprogress|300|-work|work|-vopt|D:/Desktop/VLSI/project/rtl/VLSI/rtl/sim.v|
+!i111 0
+R10

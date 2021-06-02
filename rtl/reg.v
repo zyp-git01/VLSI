@@ -1,4 +1,4 @@
-module reg (
+module Reg (
     input clk,
     input reg_en,
     input wire [23:0] reg_in,

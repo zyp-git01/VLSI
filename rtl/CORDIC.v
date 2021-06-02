@@ -30,6 +30,7 @@ wire [23:0] y_out;
 wire [23:0] angle_out;
 wire [3:0] select_out;
 wire ALU_valid_out;
+wire [3:0] select_in;
 
 //init
 wire [23:0] x_init_out;
@@ -47,6 +48,7 @@ init u_init(
     .x(x_init_out),
     .y(y_init_out),
     .out_angle(angle_init_out),
+    .select_out(select_in),
     .valid_init_out(valid_init_out)
 );
 
@@ -54,11 +56,11 @@ init u_init(
 S_C_T_ARCT u_SIN_COS_TOP(
     .clk(clk),
     .reg_en(1'b1), 
-    .valid(valid_init_out)
-    .select(select),
+    .valid(valid_init_out),
+    .select(select_in),
     .x_init(x_init_out),
     .y_init(y_init_out),
-    .target_angle(in_angle),
+    .target_angle(angle_init_out),
 
     .x_out(x_out),
     .y_out(y_out),
