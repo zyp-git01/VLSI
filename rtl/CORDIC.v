@@ -70,6 +70,7 @@ S_C_T_ARCT u_SIN_COS_TOP(
 );
 
 output_select u_output_select(
+    .clk(clk),
     .select(select_out),
     .x(x_out),
     .y(y_out),

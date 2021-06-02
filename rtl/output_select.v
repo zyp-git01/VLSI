@@ -12,6 +12,24 @@ module output_select(
 
 parameter  k = 16'b0000000010011011;
 
+wire u0_floating_out_ready;
+wire u0_floating_out_valid;
+
+wire u1_floating_out_ready;
+wire u1_floating_out_valid;
+floating_point_0 u0_floating_point(
+  .aclk(clk),
+  .s_axis_a_tvalid(select[0]),
+  .s_axis_a_tready(valid_in),
+  .s_axis_a_tdata(k),
+  .s_axis_b_tvalid(select[0]),
+  .s_axis_b_tready(valid_in),
+  .s_axis_b_tdata(y[15:0]),
+  .m_axis_result_tvalid(u0_floaring_out_valid),
+  .m_axis_result_tready(u0_floating_ready),
+  .m_axis_result_tdata(CODIC_OUT)
+);
+
 always @(posedge clk) begin
     if (select[0])      //sin
         CORDIC_OUT <= k * y;
