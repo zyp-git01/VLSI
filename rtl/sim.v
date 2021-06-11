@@ -8,10 +8,14 @@ module sim(
 
 reg clk;
 
-
+reg valid;
 
 initial begin
     #10 clk <= 1'b1;
+
+    valid <= 1'b1;
+
+    #10 valid <= 1'b0;
 end
 
 
@@ -24,8 +28,8 @@ wire out_valid;
 CORDIC u_CORDIC(
     .clk(clk),
     .in_angle(16'h001e),
-    .valid(1'b1),
-    .select(4'b0001),
+    .valid(valid),
+    .select(4'b0100),
     .another(16'h0000),
 
     .CORDIC_OUT(CORDIC_OUT),
