@@ -1,18 +1,18 @@
 module REG_TOP (
     input clk,
     input reg_en,
-    input wire [23:0] x,
-    input wire [23:0] y,
-    input wire [23:0] angle,
+    input wire [31:0] x,
+    input wire [31:0] y,
+    input wire [31:0] angle,
     input wire [3:0] reg_select_in,
-    input wire [23:0] reg_target_angle_in,
+    input wire [31:0] reg_target_angle_in,
     input wire reg_valid_in,
 
-    output wire [23:0] x_out,
-    output wire [23:0] y_out,
+    output wire [31:0] x_out,
+    output wire [31:0] y_out,
     output reg [3:0] reg_select_out,
-    output reg [23:0] reg_target_angle_out,
-    output wire [23:0] angle_out,
+    output reg [31:0] reg_target_angle_out,
+    output wire [31:0] angle_out,
     output reg reg_valid_out
 );
 

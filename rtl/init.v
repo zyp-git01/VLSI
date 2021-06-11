@@ -15,26 +15,26 @@ module init (
     input wire [3:0] select,
     input wire valid,
 
-    output reg [23:0] x,
-    output reg [23:0] y,
-    output reg [23:0] out_angle,
+    output reg [31:0] x,
+    output reg [31:0] y,
+    output reg [31:0] out_angle,
     output reg [3:0] select_out,
     output reg valid_init_out
 );
 
 always @(posedge clk) begin
     if (valid)
-        x <= select[3] ? in_angle : 24'h000100;
+        x <= select[3] ? {in_angle,{16{0}}} : 32'h00010000;
 end
 
 always @(posedge clk) begin
     if (valid)
-        y <= select[3] ? another :24'h000000;
+        y <= select[3] ? {another,{16{0}}} :32'h00000000;
 end 
 
 always @(posedge clk) begin
     if (valid)
-        out_angle <= select[3] ? 24'h000000: {{8'b00000000},in_angle};
+        out_angle <= select[3] ? 32'h00000000: {in_angle,{16'h0000}};
 end
 
 always @(posedge clk) begin

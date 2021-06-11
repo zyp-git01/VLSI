@@ -1,19 +1,19 @@
 module ALU_TOP (
-    input wire signed [23:0] x_init,
-    input wire signed [23:0] y_init,
-    input wire signed [23:0] x_shift,
-    input wire signed [23:0] y_shift,
-    input wire [23:0] target_angle,
+    input wire signed [31:0] x_init,
+    input wire signed [31:0] y_init,
+    input wire signed [31:0] x_shift,
+    input wire signed [31:0] y_shift,
+    input wire [31:0] target_angle,
     input wire [3:0] select,
     input wire valid,
-    input wire [23:0] angle,
-    input wire [23:0] delta_angle,
+    input wire [31:0] angle,
+    input wire [31:0] delta_angle,
 
-    output wire signed [23:0] x_out,
-    output wire signed [23:0] y_out,
-    output wire [23:0] angle_out,
+    output wire signed [31:0] x_out,
+    output wire signed [31:0] y_out,
+    output wire [31:0] angle_out,
     output wire [3:0] select_out,
-    output wire [23:0] target_angle_out,
+    output wire [31:0] target_angle_out,
     output wire ALU_valid_out
 );
 

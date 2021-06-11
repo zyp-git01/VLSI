@@ -3,102 +3,102 @@ module S_C_T_ARCT (
     input reg_en,
     input wire valid,
     input wire [3:0] select, 
-    input wire [23:0] x_init,
-    input wire [23:0] y_init,
-    input wire [23:0] target_angle,
+    input wire [31:0] x_init,
+    input wire [31:0] y_init,
+    input wire [31:0] target_angle,
 
-    output wire [23:0] x_out,
-    output wire [23:0] y_out,
+    output wire [31:0] x_out,
+    output wire [31:0] y_out,
     output wire ALU_valid_out,
-    output wire [23:0] angle_out,
+    output wire [31:0] angle_out,
     output wire [3:0] select_out
 );
 
-
-parameter  angle_45 = 24'h002d00;
-parameter  angle_26 = 24'h001a90;
-parameter  angle_14 = 24'h000e09;
-parameter  angle_7 = 24'h000720;
-parameter  angle_3 = 24'h000393;
-parameter  angle_1 = 24'h0001ca;
+//32位中，16位小数
+parameter  angle_45 = 32'h002d0000;
+parameter  angle_26 = 32'h001a90a3;
+parameter  angle_14 = 32'h000e0937;
+parameter  angle_7 = 32'h00072000;
+parameter  angle_3 = 32'h00039388;
+parameter  angle_1 = 32'h0001ca36;
 
 
 //1
-wire [23:0] ALU1_x_out;
-wire [23:0] ALU1_y_out;
-wire [23:0] ALU1_angle_out;
+wire [31:0] ALU1_x_out;
+wire [31:0] ALU1_y_out;
+wire [31:0] ALU1_angle_out;
 wire ALU1_valid_out;
 wire [3:0] ALU1_select_out;
-wire [23:0] ALU1_target_angle_out;
+wire [31:0] ALU1_target_angle_out;
 
 wire [3:0] reg1_select_out;
-wire [23:0] reg1_target_angle_out;
+wire [31:0] reg1_target_angle_out;
 
 wire reg1_valid_out;
-wire [23:0] reg1_x_out;
-wire [23:0] reg1_y_out;
-wire [23:0] reg1_angle_out;
+wire [31:0] reg1_x_out;
+wire [31:0] reg1_y_out;
+wire [31:0] reg1_angle_out;
 
 //2
 
-wire [23:0] ALU2_x_out;
-wire [23:0] ALU2_y_out;
-wire [23:0] ALU2_angle_out;
+wire [31:0] ALU2_x_out;
+wire [31:0] ALU2_y_out;
+wire [31:0] ALU2_angle_out;
 wire ALU2_valid_out;
 wire [3:0] ALU2_select_out;
-wire [23:0] ALU2_target_angle_out;
+wire [31:0] ALU2_target_angle_out;
 
 wire [3:0] reg2_select_out;
-wire [23:0] reg2_target_angle_out;
+wire [31:0] reg2_target_angle_out;
 wire reg2_valid_out;
-wire [23:0] reg2_x_out;
-wire [23:0] reg2_y_out;
-wire [23:0] reg2_angle_out;
+wire [31:0] reg2_x_out;
+wire [31:0] reg2_y_out;
+wire [31:0] reg2_angle_out;
 
 //3
-wire [23:0] ALU3_x_out;
-wire [23:0] ALU3_y_out;
-wire [23:0] ALU3_angle_out;
+wire [31:0] ALU3_x_out;
+wire [31:0] ALU3_y_out;
+wire [31:0] ALU3_angle_out;
 wire ALU3_valid_out;
 wire [3:0] ALU3_select_out;
-wire [23:0] ALU3_target_angle_out;
+wire [31:0] ALU3_target_angle_out;
 
 wire [3:0] reg3_select_out;
-wire [23:0] reg3_target_angle_out;
+wire [31:0] reg3_target_angle_out;
 wire reg3_valid_out;
-wire [23:0] reg3_x_out;
-wire [23:0] reg3_y_out;
-wire [23:0] reg3_angle_out;
+wire [31:0] reg3_x_out;
+wire [31:0] reg3_y_out;
+wire [31:0] reg3_angle_out;
 
 //4
-wire [23:0] ALU4_x_out;
-wire [23:0] ALU4_y_out;
-wire [23:0] ALU4_angle_out;
+wire [31:0] ALU4_x_out;
+wire [31:0] ALU4_y_out;
+wire [31:0] ALU4_angle_out;
 wire ALU4_valid_out;
 wire [3:0] ALU4_select_out;
-wire [23:0] ALU4_target_angle_out;
+wire [31:0] ALU4_target_angle_out;
 
 wire [3:0] reg4_select_out;
-wire [23:0] reg4_target_angle_out;
+wire [31:0] reg4_target_angle_out;
 wire reg4_valid_out;
-wire [23:0] reg4_x_out;
-wire [23:0] reg4_y_out;
-wire [23:0] reg4_angle_out;
+wire [31:0] reg4_x_out;
+wire [31:0] reg4_y_out;
+wire [31:0] reg4_angle_out;
 
 //5
-wire [23:0] ALU5_x_out;
-wire [23:0] ALU5_y_out;
-wire [23:0] ALU5_angle_out;
+wire [31:0] ALU5_x_out;
+wire [31:0] ALU5_y_out;
+wire [31:0] ALU5_angle_out;
 wire ALU5_valid_out;
 wire [3:0] ALU5_select_out;
-wire [23:0] ALU5_target_angle_out;
+wire [31:0] ALU5_target_angle_out;
 
 wire [3:0] reg5_select_out;
-wire [23:0] reg5_target_angle_out;
+wire [31:0] reg5_target_angle_out;
 wire reg5_valid_out;
-wire [23:0] reg5_x_out;
-wire [23:0] reg5_y_out;
-wire [23:0] reg5_angle_out;
+wire [31:0] reg5_x_out;
+wire [31:0] reg5_y_out;
+wire [31:0] reg5_angle_out;
 
 
 //1
@@ -145,8 +145,8 @@ REG_TOP u1_REG_TOP(
 ALU_TOP u2_ALU_TOP(
     .x_init(reg1_x_out),
     .y_init(reg1_y_out),
-    .x_shift({{1'b0},reg1_x_out[23:1]}),
-    .y_shift({{1'b0},reg1_y_out[23:1]}),
+    .x_shift({{1'b0},reg1_x_out[31:1]}),
+    .y_shift({{1'b0},reg1_y_out[31:1]}),
     .target_angle(target_angle),
     .select(reg1_select_out),
     .angle(reg1_angle_out),
@@ -182,8 +182,8 @@ REG_TOP u2_REG_TOP(
 ALU_TOP u3_ALU_TOP(
     .x_init(reg2_x_out),
     .y_init(reg2_y_out),
-    .x_shift({{2'b00},reg2_x_out[23:2]}),
-    .y_shift({{2'b00},reg2_y_out[23:2]}),
+    .x_shift({{2'b00},reg2_x_out[31:2]}),
+    .y_shift({{2'b00},reg2_y_out[31:2]}),
     .target_angle(target_angle),
     .select(reg2_select_out),
     .angle(reg2_angle_out),
@@ -220,8 +220,8 @@ REG_TOP u3_REG_TOP(
 ALU_TOP u4_ALU_TOP(
     .x_init(reg3_x_out),
     .y_init(reg3_y_out),
-    .x_shift({{3'b000},reg3_x_out[23:3]}),
-    .y_shift({{3'b000},reg3_y_out[23:3]}),
+    .x_shift({{3'b000},reg3_x_out[31:3]}),
+    .y_shift({{3'b000},reg3_y_out[31:3]}),
     .target_angle(target_angle),
     .select(reg3_select_out),
     .angle(reg3_angle_out),
@@ -257,8 +257,8 @@ REG_TOP u4_REG_TOP(
 ALU_TOP u5_ALU_TOP(
     .x_init(reg4_x_out),
     .y_init(reg4_y_out),
-    .x_shift({{4'b0000},reg4_x_out[23:4]}),
-    .y_shift({{4'b0000},reg4_y_out[23:4]}),
+    .x_shift({{4'b0000},reg4_x_out[31:4]}),
+    .y_shift({{4'b0000},reg4_y_out[31:4]}),
     .target_angle(target_angle),
     .angle(reg4_angle_out),
     .select(reg4_select_out),
@@ -294,8 +294,8 @@ REG_TOP u5_REG_TOP(
 ALU_TOP u6_ALU_TOP(
     .x_init(reg5_x_out),
     .y_init(reg5_y_out),
-    .x_shift({{5'b00000},reg5_x_out[23:5]}),
-    .y_shift({{5'b00000},reg5_y_out[23:5]}),
+    .x_shift({{5'b00000},reg5_x_out[31:5]}),
+    .y_shift({{5'b00000},reg5_y_out[31:5]}),
     .target_angle(target_angle),
     .select(reg5_select_out),
     .angle(reg5_angle_out),
