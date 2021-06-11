@@ -10,7 +10,7 @@ module output_select(
     output reg valid_out
 );
 
-parameter  k = 16'b0000000010011011;
+parameter  k = 32'h00009b7b;
 
 wire [31:0] CORDIC_sin_out;
 wire [31:0] CORDIC_cos_out;

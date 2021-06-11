@@ -23,7 +23,7 @@ wire [15:0] CORDIC_OUT;
 wire out_valid;
 CORDIC u_CORDIC(
     .clk(clk),
-    .in_angle(16'h1e00),
+    .in_angle(16'h001e),
     .valid(1'b1),
     .select(4'b0001),
     .another(16'h0000),

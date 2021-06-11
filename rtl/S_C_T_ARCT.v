@@ -110,7 +110,7 @@ ALU_TOP u1_ALU_TOP(
     .target_angle(target_angle),
     .select(select),
     .valid(valid),
-    .angle(24'd0),
+    .angle(32'd0),
     .delta_angle(angle_45),
 
     .x_out(ALU1_x_out),

@@ -25,17 +25,17 @@ module  CORDIC(
 );
 
 //S_C_T_ARCT
-wire [23:0] x_out;
-wire [23:0] y_out;
-wire [23:0] angle_out;
+wire [31:0] x_out;
+wire [31:0] y_out;
+wire [31:0] angle_out;
 wire [3:0] select_out;
 wire ALU_valid_out;
 wire [3:0] select_in;
 
 //init
-wire [23:0] x_init_out;
-wire [23:0] y_init_out;
-wire [23:0] angle_init_out;
+wire [31:0] x_init_out;
+wire [31:0] y_init_out;
+wire [31:0] angle_init_out;
 wire valid_init_out;
 
 init u_init(
